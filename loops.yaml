@@ -18,9 +18,9 @@
       - gcc
       - mysql
       - git
-    - name: handle the undefined variables'
+    - name: handle the undefined variables
       ansible.builtin.debug:
-      msg: "my name is : {{ name | default('govardhan') }}"
+        msg: "my name is : {{ name | default('govardhan') }}"
     - name: convert string to list
       vars:
         fruits: "apples, banana, lemon"
