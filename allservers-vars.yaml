@@ -3,7 +3,7 @@
   tasks:
     - name: print the variables
       ansible.builtin.debug:
-        msg: "The course is : {{COURSE}} and duration is : {{DURATION}} }"
+        msg: "The course is : {{COURSE}} and duration is : {{DURATION}} "
 
 - name: variables passing using local vars in inventory file
   hosts: local
@@ -11,4 +11,4 @@
   tasks:
     - name: print the variables
       ansible.builtin.debug:
-        msg: "The course is : {{COURSE}} and duration is : {{DURATION}} }"
+        msg: "The course is : {{COURSE}} and duration is : {{DURATION}} "
