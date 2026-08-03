@@ -1,9 +1,9 @@
 - name: variables passing
   hosts: local
   connection: local
-  vars:
-     COURSE: "Devops with AWS"
-     DURATION: 150hrs
+  # vars:
+  #    COURSE: "Devops with AWS"
+  #    DURATION: 150hrs
  # vars_files:
  # - course.yaml
   # vars_prompt:
@@ -26,3 +26,4 @@
 # 2. Task  variable of 120hrs printed 
 # 3. vars_file has 180 hrs which is taken next priority
 # 4. vars_prompt has next priority
+# 5. vars has next priority
