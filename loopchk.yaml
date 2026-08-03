@@ -1,0 +1,16 @@
+- name: check whether package is already installed
+  hosts: web
+  become: yes
+  tasks:
+  name: install the packages
+    ansible.builtin.package:
+      name: {{ item.name }}
+      state: {{ item.state }}
+    loop:
+    - { name: 'git' , state: 'present'}
+    - { name: 'gcc' , state: 'absent'}
+    - { name: 'mysql' , state: 'present'}
+    - { name: 'zip' , state: 'absent'}
+    
+
+    

@@ -26,4 +26,6 @@
 # 2. Task  variable of 120hrs printed 
 # 3. vars_file has 180 hrs which is taken next priority
 # 4. vars_prompt has next priority
-# 5. vars has next priority
+# 5. vars/Play has next priority 
+# 6. Local in inventory has next priority
+# 7. local.vars in inventory has last priority

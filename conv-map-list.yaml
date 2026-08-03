@@ -1,0 +1,24 @@
+- name: convert map to list and vice versa
+  hosts: web
+  tasks:
+  - name: convert map to list
+    vars:
+      course:
+        name: ansible
+        duration: 15hs
+    ansible.builtin.debug:
+      msg: "course info :{{course | dict2items}}"
+  - name: convert list to map/dict
+    vars:
+      course:
+        - { 'key': 'name', 'value' : 'ansible' }
+        - { 'key': 'duration', 'value' : '20hrs' }    
+    ansible.builtin.debug:
+      msg: "course details are  :{{course | items2dict }}"
+  - name: find mx/max of numbers in given list
+    vars:
+      numbers: [10, 9, 43, 34, 89, 235, 134]
+      ansible.builtin.debug:
+        msg: " the min number is {{ numbers | min}}, max number is {{ numbers | max}} "
+
+
