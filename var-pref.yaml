@@ -8,9 +8,9 @@
   - course.yaml
   vars_prompt:
     - name: COURSE
-      msg: enter the course name      
+      prompt: enter the course name      
     - name: DURATION
-      msg: enter the course duration   
+      prompt: enter the course duration   
   tasks:
     - name: print the variables from task1
       vars:
