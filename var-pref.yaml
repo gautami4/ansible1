@@ -6,11 +6,11 @@
      DURATION: 150hrs
  # vars_files:
  # - course.yaml
-  vars_prompt:
-    - name: COURSE
-      prompt: enter the course name      
-    - name: DURATION
-      prompt: enter the course duration   
+  # vars_prompt:
+  #   - name: COURSE
+  #     prompt: enter the course name      
+  #   - name: DURATION
+  #     prompt: enter the course duration   
   tasks:
     - name: print the variables from task1
       vars:
@@ -25,3 +25,4 @@
 # 1. passing arguments --> I passed only Course, no errors for duration but course is taken from here
 # 2. Task  variable of 120hrs printed 
 # 3. vars_file has 180 hrs which is taken next priority
+# 4. vars_prompt has next priority
