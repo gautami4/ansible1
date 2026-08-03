@@ -1,27 +1,28 @@
 - name: loops and install packages
   hosts: web
   tasks:
-  - name: print the items
-    ansible.builtin.debug:
-    msg: "The name is {{ item}}"
-    loop:
-    - govardhan
-    - gowthami
-    - leeladhar
-- name: install the packages
-    ansible.builtin.package:
+
+    - name: print the items
+      ansible.builtin.debug:
+          msg: "The name is {{ item}}"
+      loop:
+       - govardhan
+       - gowthami
+       - leeladhar
+    - name: install the packages
+      ansible.builtin.package:
       name: {{ item }}
       state: installed
-    loop:
-    - gcc
-    - mysql
-    - git
-- name: handle the undefined variables'
-  ansible.builtin.debug:
-  msg: "my name is : {{ name | default('govardhan') }}"
-- name: convert string to list
-  vars:
-    fruits: "apples, banana, lemon"
-  ansible.builtin.debug:
-    msg: "fruits are : {{ fruits | split(',') }}"
+      loop:
+      - gcc
+      - mysql
+      - git
+    - name: handle the undefined variables'
+      ansible.builtin.debug:
+      msg: "my name is : {{ name | default('govardhan') }}"
+    - name: convert string to list
+      vars:
+        fruits: "apples, banana, lemon"
+      ansible.builtin.debug:
+        msg: "fruits are : {{ fruits | split(',') }}"
 
