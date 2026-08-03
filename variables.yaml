@@ -6,5 +6,5 @@
      DURATION: 150hs
   tasks:
     - name: print the variables
-    ansible.builtin.debug:
-      msg: "The course is : {{COURSE} and duration is : {{DURATION}} }"
+      ansible.builtin.debug:
+        msg: "The course is : {{COURSE} and duration is : {{DURATION}} }"
