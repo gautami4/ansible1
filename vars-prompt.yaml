@@ -4,7 +4,7 @@
   vars_prompt:
     - name: COURSE
       prompt: enter the course name
-    - name: duration
+    - name: DURATION
       prompt: enter course duration
       private: false    # this will show the value what we enter on screen without hiding
     - name: instructor
