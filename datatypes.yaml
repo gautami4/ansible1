@@ -13,8 +13,8 @@
       ci : jenkins
       cd : ansible
       cloud : AWS
-   tasks:
+  tasks:
    - name : print the data types
-   ansible.builtin.debug:
-   msg: "Hi all, the course_name is : {{course_name}} , duration is {{duration}} , topics covered are
+     ansible.builtin.debug:
+      msg: "Hi all, the course_name is : {{course_name}} , duration is {{duration}} , topics covered are
         {{topics}} , offline classes are held {{offline_class}} , tools learnt {{tools_learnt}}"
