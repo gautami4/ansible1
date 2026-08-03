@@ -1,13 +1,13 @@
-- name: ngnix server
+- name: nginx server
   hosts: web
   become: yes # root user access
   tasks: 
   - name: install server
     ansible.builtin.package:
-      name: ngnix
+      name: nginx
       state: present
   - name: start service
     ansible.builtin.service:
-      name: ngnix
+      name: nginx
       state: started
-      
+
