@@ -1,0 +1,25 @@
+- name: variables passing
+  hosts: local
+  connection: local
+  vars:
+     COURSE: "Devops with AWS"
+     DURATION: 150hrs
+  vars_files:
+  - course.yaml
+  vars_prompt:
+    - name: COURSE
+      msg: enter the course name      
+    - name: DURATION
+      msg: enter the course duration   
+  tasks:
+    - name: print the variables from task1
+      vars:
+        COURSE: "Devops Only"
+        DURATION: 120hrs 
+      ansible.builtin.debug:
+        msg: "The course is : {{COURSE}} and duration is : {{DURATION}} "
+    - name: print the variables from task2
+      ansible.builtin.debug:
+        msg: "The course is : {{COURSE}} and duration is : {{DURATION}} "
+
+# 1. passing arguments
