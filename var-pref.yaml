@@ -4,8 +4,8 @@
   vars:
      COURSE: "Devops with AWS"
      DURATION: 150hrs
-  vars_files:
-  - course.yaml
+ # vars_files:
+ # - course.yaml
   vars_prompt:
     - name: COURSE
       prompt: enter the course name      
@@ -22,4 +22,6 @@
       ansible.builtin.debug:
         msg: "The course is : {{COURSE}} and duration is : {{DURATION}} "
 
-# 1. passing arguments
+# 1. passing arguments --> I passed only Course, no errors for duration but course is taken from here
+# 2. Task  variable of 120hrs printed 
+# 3. vars_file has 180 hrs which is taken next priority
