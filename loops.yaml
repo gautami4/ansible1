@@ -4,14 +4,14 @@
 
     - name: print the items
       ansible.builtin.debug:
-          msg: "The name is {{ item}}"
+          msg: "The name is {{ item }}"
       loop:
        - govardhan
        - gowthami
        - leeladhar
     - name: install the packages
       ansible.builtin.package:
-      name: {{ item }}
+      name: { item }
       state: installed
       loop:
       - gcc
