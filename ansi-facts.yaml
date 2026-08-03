@@ -1,5 +1,6 @@
 - name: print the ansible facts and install nginx if RHEL
   hosts: web
+  become: yes
   tasks:
   - name: print the facts
     ansible.builtin.debug:
